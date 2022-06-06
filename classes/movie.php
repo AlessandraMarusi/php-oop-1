@@ -12,7 +12,6 @@ class Movie {
     }
 
     public function setPg($_pg){
-        var_dump($_pg);
         if($_pg == 0){
             $this->pg = 'T: Film adatto a tutti.';
         }
