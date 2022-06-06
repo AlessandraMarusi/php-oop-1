@@ -2,28 +2,28 @@
 require_once __DIR__.'/classes/movie.php';
 $movies = [
     [
-        'title' => 'Titolo di un film',
+        'title' => 'Un film',
         'genre' => 'Filmoso',
-        'rate' => '6',
-        'pg' => '0',
+        'rate' => '5',
+        'pg' => 0,
     ],
     [
-        'title' => 'Titolo di un altro film',
+        'title' => 'Un altro film',
         'genre' => 'Filmettoso',
         'rate' => '8',
-        'pg' => '14',
+        'pg' => 14,
     ],
     [
-        'title' => 'Il FIlm',
+        'title' => 'Il Film',
         'genre' => 'Boh',
         'rate' => '7',
-        'pg' => '18',
+        'pg' => 18,
     ],
     [
         'title' => 'Il Film 2 - La Vendetta',
-        'genre' => 'Boh',
+        'genre' => 'BohBoh',
         'rate' => '2',
-        'pg' => '6',
+        'pg' => 14,
     ]
 ];
 ?>
@@ -43,12 +43,13 @@ $movies = [
             <?php 
             foreach($movies as $key => $value) {
                 $movie = new Movie($value['title'], $value['genre'], $value['rate'], $value['pg']);
-                $movie -> setPg($value['pg']);
-                var_dump($movie);
+                var_dump($value['pg']);
+                $movie->setPg($value['pg']);
+                //var_dump($movie);
                 echo '<div class="card">
                     <h2>Titolo: '.$movie->getTitle().'</h2>
-                    <h4>Genere:' .$movie->getGenre().'</h4>
-                    <h4>Rating:' .$movie->getRate().'</h4>
+                    <h4>Genere: ' .$movie->getGenre().'</h4>
+                    <h4>Rating: ' .$movie->getRate().'</h4>
                     <h4>'.$movie->getPg().'</h4>
                 </div>'
             ?>

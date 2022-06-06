@@ -11,17 +11,18 @@ class Movie {
         $this->pg = $_pg;
     }
 
-    public function setPg(){
-        if($this->pg = 0){
+    public function setPg($_pg){
+        var_dump($_pg);
+        if($_pg == 0){
             $this->pg = 'T: Film adatto a tutti.';
         }
-        else if ($this->pg = 6){
+        else if ($_pg == 6){
             $this->pg = '6+: Non adatto ai minori di 6 anni.';
         }
-        else if ($this->pg = 14){
+        else if ($_pg == 14){
             $this->pg = '14+: Vietato ai minori di 14 anni; gli spettatori che hanno compiuto 12 anni sono ammessi alla proiezione se accompagnati da un genitore o da un tutore.';
         }
-        else if ($this->pg = 18){
+        else if ($_pg == 18){
             $this->pg = '18+: Vietato ai minori di 18 anni; gli spettatori che hanno compiuto 16 anni sono ammessi alla proiezione se accompagnati da un genitore o da un tutore.';
         }
     }
